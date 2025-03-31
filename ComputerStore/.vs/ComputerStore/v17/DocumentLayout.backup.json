@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BTLon_ComputerStore\\ComputerStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\dal\\hoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\dal\\hoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\bll\\hoadonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\bll\\hoadonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\models\\chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\models\\chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\models\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\models\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\dal\\chitiethoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\dal\\chitiethoadonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\bll\\chitiethoadonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\bll\\chitiethoadonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\models\\loaisanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\models\\loaisanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|d:\\btlon_computerstore\\computerstore\\computerstore\\computerstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{27DBFC50-D18D-40C3-897F-1A06BA0F4B53}|ComputerStore\\ComputerStore.csproj|solutionrelative:computerstore\\computerstore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HoaDonService.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\BLL\\HoaDonService.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\BLL\\HoaDonService.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\BLL\\HoaDonService.cs",
+              "RelativeToolTip": "ComputerStore\\BLL\\HoaDonService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:21:09.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDonRepository.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\DAL\\HoaDonRepository.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\DAL\\HoaDonRepository.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\DAL\\HoaDonRepository.cs",
+              "RelativeToolTip": "ComputerStore\\DAL\\HoaDonRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:19:14.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Forms\\Form1.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.cs [Design]",
+              "RelativeToolTip": "ComputerStore\\Forms\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:23:21.597Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\HoaDon.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Models\\HoaDon.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\HoaDon.cs",
+              "RelativeToolTip": "ComputerStore\\Models\\HoaDon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:14:58.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChiTietHoaDon.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\ChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Models\\ChiTietHoaDon.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\ChiTietHoaDon.cs",
+              "RelativeToolTip": "ComputerStore\\Models\\ChiTietHoaDon.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:15:07.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Forms\\Form1.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.cs",
+              "RelativeToolTip": "ComputerStore\\Forms\\Form1.cs",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAmwPUBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:03:51.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChiTietHoaDonRepository.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\DAL\\ChiTietHoaDonRepository.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\DAL\\ChiTietHoaDonRepository.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\DAL\\ChiTietHoaDonRepository.cs",
+              "RelativeToolTip": "ComputerStore\\DAL\\ChiTietHoaDonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:19:37.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Forms\\Form1.Designer.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Forms\\Form1.Designer.cs",
+              "RelativeToolTip": "ComputerStore\\Forms\\Form1.Designer.cs",
+              "ViewState": "AgIAAFsBAAAAAAAAAAD4v3YBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:51:55.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChiTietHoaDonService.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\BLL\\ChiTietHoaDonService.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\BLL\\ChiTietHoaDonService.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\BLL\\ChiTietHoaDonService.cs",
+              "RelativeToolTip": "ComputerStore\\BLL\\ChiTietHoaDonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:21:18.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Models\\SanPham.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\SanPham.cs",
+              "RelativeToolTip": "ComputerStore\\Models\\SanPham.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:14:34.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoaiSanPham.cs",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\LoaiSanPham.cs",
+              "RelativeDocumentMoniker": "ComputerStore\\Models\\LoaiSanPham.cs",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\Models\\LoaiSanPham.cs",
+              "RelativeToolTip": "ComputerStore\\Models\\LoaiSanPham.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T14:14:26.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ComputerStore.csproj",
+              "DocumentMoniker": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\ComputerStore.csproj",
+              "RelativeDocumentMoniker": "ComputerStore\\ComputerStore.csproj",
+              "ToolTip": "D:\\BTLon_ComputerStore\\ComputerStore\\ComputerStore\\ComputerStore.csproj",
+              "RelativeToolTip": "ComputerStore\\ComputerStore.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T14:13:10.004Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
