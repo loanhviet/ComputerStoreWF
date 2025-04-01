@@ -11,6 +11,7 @@ namespace ComputerStore
         private readonly LoaiSanPhamService _loaiSanPhamService;
         private readonly SanPhamService _sanPhamService;
         private readonly HoaDonService _hoaDonService;
+        private readonly StatisticsService statisticsService;
         private List<Models.ChiTietHoaDon> _chiTietHoaDons = new List<Models.ChiTietHoaDon>();
         private decimal _tongTien = 0;
         public Form1()
@@ -20,6 +21,7 @@ namespace ComputerStore
             _loaiSanPhamService = new LoaiSanPhamService(connectionString);
             _sanPhamService = new SanPhamService(connectionString);
             _hoaDonService = new HoaDonService(connectionString);
+            statisticsService = new StatisticsService(connectionString);
         }
         private void LoadCategories()
         {
@@ -65,6 +67,7 @@ namespace ComputerStore
             LoadProducts();
             LoadCategoriesToComboBox();
             LoadProductsToComboBox();
+            LoadCategoriesIntoComboBoxThongKe();
         }
         private void LoadCategoriesToComboBox()
         {
@@ -444,7 +447,7 @@ namespace ComputerStore
             // Cập nhật DataGridView
             dtgvHoaDon.DataSource = null;
             dtgvHoaDon.DataSource = _chiTietHoaDons;
-            
+
 
             // Xóa dữ liệu nhập
             numericUpDownHoaDonSoLuong.Value = 0;
@@ -488,13 +491,13 @@ namespace ComputerStore
 
                     // Cập nhật số lượng tồn trong CSDL
                     UpdateSoLuongTon(chiTiet.MaSP, chiTiet.SoLuong);
-                    
+
                 }
 
                 MessageBox.Show("Hoàn tất hóa đơn thành công!");
                 LoadProducts();
                 LoadProductsToComboBox();
-                
+
 
                 // Reset dữ liệu hóa đơn
                 ClearHoaDon();
@@ -525,7 +528,7 @@ namespace ComputerStore
                 throw new Exception("Lỗi khi cập nhật số lượng tồn: " + ex.Message);
             }
         }
-        
+
 
         private void cbbHoaDonProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -552,5 +555,117 @@ namespace ComputerStore
                 txtHoaDonDonGia.Clear();
             }
         }
+
+        private void txtSearchCategory_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearchCategory.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // Nếu từ khóa rỗng, hiển thị toàn bộ danh sách
+                dtvgCategory.DataSource = _loaiSanPhamService.GetAllCategories();
+            }
+            else
+            {
+                // Tìm kiếm theo từ khóa
+                var searchResults = _loaiSanPhamService.SearchCategories(keyword);
+                dtvgCategory.DataSource = searchResults;
+            }
+        }
+
+        private void txtSearchProduct_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearchProduct.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // Nếu từ khóa rỗng, hiển thị toàn bộ danh sách
+                dtvgProduct.DataSource = _sanPhamService.GetAllProducts();
+            }
+            else
+            {
+                // Tìm kiếm theo từ khóa
+                var searchResults = _sanPhamService.SearchProducts(keyword);
+                dtvgProduct.DataSource = searchResults;
+            }
+        }
+
+        private void btnXemBaoCao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                int selectedCategoryId = 0; 
+                if (cbbThongKe.SelectedValue != null)
+                {
+                    
+                    int.TryParse(cbbThongKe.SelectedValue.ToString(), out selectedCategoryId);
+                }
+
+                
+                DateTime fromDate = dateTimePickerThongKeStart.Value.Date; // Lấy phần ngày, bỏ qua giờ
+                DateTime toDate = dateTimePickerThongKeEnd.Value.Date;
+
+                
+
+                List<ThongKe> results = null; 
+                if (selectedCategoryId > 0) // Nếu chọn một loại cụ thể (MaLoai > 0)
+                {
+                    
+                    results = statisticsService.GetRevenueByCategory(selectedCategoryId, fromDate, toDate);
+                }
+                else
+                {
+                    
+                    results = statisticsService.GetRevenueByDate(fromDate, toDate);
+                }
+
+                
+                dtvgThongKe.DataSource = null; 
+                dtvgThongKe.DataSource = results;
+
+
+
+
+                decimal totalRevenue = results?.Sum(r => r.TongDoanhThu) ?? 0m;
+
+                
+                txtTongDoanhThu.Text = totalRevenue.ToString("N0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xem báo cáo: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+        }
+
+        private void LoadCategoriesIntoComboBoxThongKe()
+        {
+            try
+            {
+                
+                var categories = _loaiSanPhamService.GetAllCategories();
+
+               
+                var categoriesForComboBox = new List<LoaiSanPham>(categories);
+
+                
+                categoriesForComboBox.Insert(0, new LoaiSanPham { MaLoai = 0, TenLoai = "--- Tất cả loại ---" });
+
+                
+                cbbThongKe.DataSource = null; 
+                cbbThongKe.DataSource = categoriesForComboBox;
+                cbbThongKe.DisplayMember = "TenLoai";  
+                cbbThongKe.ValueMember = "MaLoai";  
+
+                cbbThongKe.SelectedIndex = 0; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách loại sản phẩm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+        }
+
     }
 }

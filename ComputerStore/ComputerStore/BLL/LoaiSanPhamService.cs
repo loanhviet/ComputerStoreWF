@@ -89,5 +89,15 @@ namespace ComputerStore.BLL
                 throw new Exception("Lỗi khi xóa loại sản phẩm: " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// Tìm kiếm các loại sản phẩm theo từ khóa
+        /// </summary>
+        /// <param name="keyword">Từ khóa tìm kiếm</param>
+        /// <returns>Danh sách các loại sản phẩm phù hợp</returns>
+        public List<LoaiSanPham> SearchCategories(string keyword)
+        {
+            return _repository.SearchCategories(keyword);
+        }
     }
 }

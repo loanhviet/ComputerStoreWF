@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using ComputerStore.Models;
 
 namespace ComputerStore.DAL
 {
@@ -135,6 +136,53 @@ namespace ComputerStore.DAL
             {
                 throw new Exception("Lỗi khi xóa sản phẩm: " + ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Tìm kiếm các sản phẩm theo từ khóa
+        /// </summary>
+        /// <param name="keyword">Từ khóa tìm kiếm (tên sản phẩm, mã sản phẩm, hoặc giá bán)</param>
+        /// <returns>Danh sách các sản phẩm phù hợp</returns>
+        public List<SanPham> SearchProducts(string keyword)
+        {
+            List<SanPham> products = new List<SanPham>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    string query = @"
+                    SELECT * 
+                    FROM SanPham 
+                    WHERE TenSP LIKE @Keyword OR CAST(MaSP AS NVARCHAR) LIKE @Keyword OR CAST(GiaBan AS NVARCHAR) LIKE @Keyword";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Thêm từ khóa tìm kiếm với dấu % để tìm kiếm gần đúng
+                        cmd.Parameters.AddWithValue("@Keyword", $"%{keyword}%");
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                products.Add(new SanPham
+                                {
+                                    MaSP = Convert.ToInt32(reader["MaSP"]),
+                                    TenSP = reader["TenSP"].ToString(),
+                                    MaLoai = Convert.ToInt32(reader["MaLoai"]),
+                                    GiaBan = Convert.ToDecimal(reader["GiaBan"]),
+                                    SoLuongTon = Convert.ToInt32(reader["SoLuongTon"])
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tìm kiếm sản phẩm: " + ex.Message);
+            }
+
+            return products;
         }
     }
 }

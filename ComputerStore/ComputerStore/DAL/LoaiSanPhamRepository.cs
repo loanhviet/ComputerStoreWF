@@ -129,5 +129,49 @@ namespace ComputerStore.DAL
                 throw new Exception("Lỗi khi xóa loại sản phẩm: " + ex.Message);
             }
         }
+        /// <summary>
+        /// Tìm kiếm các loại sản phẩm theo từ khóa
+        /// </summary>
+        /// <param name="keyword">Từ khóa tìm kiếm (tên loại hoặc mã loại)</param>
+        /// <returns>Danh sách các loại sản phẩm phù hợp</returns>
+        public List<LoaiSanPham> SearchCategories(string keyword)
+        {
+            List<LoaiSanPham> categories = new List<LoaiSanPham>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    string query = @"
+                    SELECT MaLoai, TenLoai 
+                    FROM LoaiSanPham 
+                    WHERE TenLoai LIKE @Keyword OR CAST(MaLoai AS NVARCHAR) LIKE @Keyword";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Thêm từ khóa tìm kiếm với dấu % để tìm kiếm gần đúng
+                        cmd.Parameters.AddWithValue("@Keyword", $"%{keyword}%");
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                categories.Add(new LoaiSanPham
+                                {
+                                    MaLoai = Convert.ToInt32(reader["MaLoai"]),
+                                    TenLoai = reader["TenLoai"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tìm kiếm loại sản phẩm: " + ex.Message);
+            }
+
+            return categories;
+        }
+
     }
 }

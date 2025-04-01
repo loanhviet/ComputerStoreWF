@@ -34,6 +34,8 @@
             tabControl1 = new TabControl();
             tabPageLoaiSanPham = new TabPage();
             panel4 = new Panel();
+            txtSearchProduct = new TextBox();
+            label23 = new Label();
             btnDeleteProduct = new Button();
             btnUpdateProduct = new Button();
             numericUpDownSoLuongTon = new NumericUpDown();
@@ -48,7 +50,9 @@
             btnAddProduct = new Button();
             dtvgProduct = new DataGridView();
             panel3 = new Panel();
+            txtSearchCategory = new TextBox();
             btnDeleteCategory = new Button();
+            label24 = new Label();
             btnUpdateCategory = new Button();
             txtNameCategory = new TextBox();
             label3 = new Label();
@@ -77,12 +81,14 @@
             label10 = new Label();
             label9 = new Label();
             tabPageThongKe = new TabPage();
+            dateTimePickerThongKeEnd = new DateTimePicker();
+            label25 = new Label();
             label21 = new Label();
             panel7 = new Panel();
             txtTongDoanhThu = new TextBox();
             label22 = new Label();
             dtvgThongKe = new DataGridView();
-            dateTimePickerThongKe = new DateTimePicker();
+            dateTimePickerThongKeStart = new DateTimePicker();
             cbbThongKe = new ComboBox();
             label20 = new Label();
             label19 = new Label();
@@ -164,6 +170,8 @@
             // panel4
             // 
             panel4.BackColor = Color.Linen;
+            panel4.Controls.Add(txtSearchProduct);
+            panel4.Controls.Add(label23);
             panel4.Controls.Add(btnDeleteProduct);
             panel4.Controls.Add(btnUpdateProduct);
             panel4.Controls.Add(numericUpDownSoLuongTon);
@@ -183,9 +191,26 @@
             panel4.Size = new Size(520, 425);
             panel4.TabIndex = 1;
             // 
+            // txtSearchProduct
+            // 
+            txtSearchProduct.Location = new Point(384, 110);
+            txtSearchProduct.Name = "txtSearchProduct";
+            txtSearchProduct.Size = new Size(100, 23);
+            txtSearchProduct.TabIndex = 19;
+            txtSearchProduct.TextChanged += txtSearchProduct_TextChanged;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(334, 113);
+            label23.Name = "label23";
+            label23.Size = new Size(26, 15);
+            label23.TabIndex = 18;
+            label23.Text = "Lọc";
+            // 
             // btnDeleteProduct
             // 
-            btnDeleteProduct.Location = new Point(410, 106);
+            btnDeleteProduct.Location = new Point(344, 71);
             btnDeleteProduct.Name = "btnDeleteProduct";
             btnDeleteProduct.Size = new Size(75, 23);
             btnDeleteProduct.TabIndex = 17;
@@ -195,7 +220,7 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(305, 123);
+            btnUpdateProduct.Location = new Point(246, 112);
             btnUpdateProduct.Name = "btnUpdateProduct";
             btnUpdateProduct.Size = new Size(75, 23);
             btnUpdateProduct.TabIndex = 16;
@@ -280,7 +305,7 @@
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Location = new Point(305, 81);
+            btnAddProduct.Location = new Point(246, 67);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(75, 23);
             btnAddProduct.TabIndex = 5;
@@ -304,7 +329,9 @@
             // panel3
             // 
             panel3.BackColor = Color.Linen;
+            panel3.Controls.Add(txtSearchCategory);
             panel3.Controls.Add(btnDeleteCategory);
+            panel3.Controls.Add(label24);
             panel3.Controls.Add(btnUpdateCategory);
             panel3.Controls.Add(txtNameCategory);
             panel3.Controls.Add(label3);
@@ -317,9 +344,17 @@
             panel3.Size = new Size(327, 425);
             panel3.TabIndex = 0;
             // 
+            // txtSearchCategory
+            // 
+            txtSearchCategory.Location = new Point(93, 119);
+            txtSearchCategory.Name = "txtSearchCategory";
+            txtSearchCategory.Size = new Size(100, 23);
+            txtSearchCategory.TabIndex = 21;
+            txtSearchCategory.TextChanged += txtSearchCategory_TextChanged;
+            // 
             // btnDeleteCategory
             // 
-            btnDeleteCategory.Location = new Point(222, 114);
+            btnDeleteCategory.Location = new Point(206, 84);
             btnDeleteCategory.Name = "btnDeleteCategory";
             btnDeleteCategory.Size = new Size(75, 23);
             btnDeleteCategory.TabIndex = 6;
@@ -327,9 +362,18 @@
             btnDeleteCategory.UseVisualStyleBackColor = true;
             btnDeleteCategory.Click += btnDeleteCategory_Click;
             // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(43, 122);
+            label24.Name = "label24";
+            label24.Size = new Size(26, 15);
+            label24.TabIndex = 20;
+            label24.Text = "Lọc";
+            // 
             // btnUpdateCategory
             // 
-            btnUpdateCategory.Location = new Point(122, 114);
+            btnUpdateCategory.Location = new Point(106, 84);
             btnUpdateCategory.Name = "btnUpdateCategory";
             btnUpdateCategory.Size = new Size(75, 23);
             btnUpdateCategory.TabIndex = 5;
@@ -339,7 +383,7 @@
             // 
             // txtNameCategory
             // 
-            txtNameCategory.Location = new Point(154, 70);
+            txtNameCategory.Location = new Point(138, 40);
             txtNameCategory.Name = "txtNameCategory";
             txtNameCategory.Size = new Size(100, 23);
             txtNameCategory.TabIndex = 4;
@@ -357,7 +401,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(59, 75);
+            label2.Location = new Point(43, 45);
             label2.Name = "label2";
             label2.Size = new Size(72, 15);
             label2.TabIndex = 2;
@@ -365,7 +409,7 @@
             // 
             // btnAddCategory
             // 
-            btnAddCategory.Location = new Point(41, 114);
+            btnAddCategory.Location = new Point(25, 84);
             btnAddCategory.Name = "btnAddCategory";
             btnAddCategory.Size = new Size(75, 23);
             btnAddCategory.TabIndex = 1;
@@ -427,10 +471,13 @@
             // 
             // dtgvHoaDon
             // 
+            dtgvHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvHoaDon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvHoaDon.Dock = DockStyle.Top;
             dtgvHoaDon.Location = new Point(0, 0);
             dtgvHoaDon.Name = "dtgvHoaDon";
+            dtgvHoaDon.ReadOnly = true;
+            dtgvHoaDon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgvHoaDon.Size = new Size(853, 210);
             dtgvHoaDon.TabIndex = 7;
             // 
@@ -592,9 +639,11 @@
             // 
             // tabPageThongKe
             // 
+            tabPageThongKe.Controls.Add(dateTimePickerThongKeEnd);
+            tabPageThongKe.Controls.Add(label25);
             tabPageThongKe.Controls.Add(label21);
             tabPageThongKe.Controls.Add(panel7);
-            tabPageThongKe.Controls.Add(dateTimePickerThongKe);
+            tabPageThongKe.Controls.Add(dateTimePickerThongKeStart);
             tabPageThongKe.Controls.Add(cbbThongKe);
             tabPageThongKe.Controls.Add(label20);
             tabPageThongKe.Controls.Add(label19);
@@ -607,6 +656,24 @@
             tabPageThongKe.TabIndex = 2;
             tabPageThongKe.Text = "Thống kê";
             tabPageThongKe.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerThongKeEnd
+            // 
+            dateTimePickerThongKeEnd.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerThongKeEnd.Format = DateTimePickerFormat.Custom;
+            dateTimePickerThongKeEnd.Location = new Point(455, 96);
+            dateTimePickerThongKeEnd.Name = "dateTimePickerThongKeEnd";
+            dateTimePickerThongKeEnd.Size = new Size(144, 23);
+            dateTimePickerThongKeEnd.TabIndex = 9;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(334, 102);
+            label25.Name = "label25";
+            label25.Size = new Size(81, 15);
+            label25.TabIndex = 8;
+            label25.Text = "Ngày kết thúc";
             // 
             // label21
             // 
@@ -631,9 +698,11 @@
             // 
             // txtTongDoanhThu
             // 
+            txtTongDoanhThu.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTongDoanhThu.Location = new Point(185, 228);
             txtTongDoanhThu.Name = "txtTongDoanhThu";
-            txtTongDoanhThu.Size = new Size(100, 23);
+            txtTongDoanhThu.ReadOnly = true;
+            txtTongDoanhThu.Size = new Size(100, 26);
             txtTongDoanhThu.TabIndex = 9;
             // 
             // label22
@@ -648,21 +717,23 @@
             // 
             // dtvgThongKe
             // 
+            dtvgThongKe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtvgThongKe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtvgThongKe.Dock = DockStyle.Top;
             dtvgThongKe.Location = new Point(0, 0);
             dtvgThongKe.Name = "dtvgThongKe";
+            dtvgThongKe.ReadOnly = true;
             dtvgThongKe.Size = new Size(853, 218);
             dtvgThongKe.TabIndex = 0;
             // 
-            // dateTimePickerThongKe
+            // dateTimePickerThongKeStart
             // 
-            dateTimePickerThongKe.CustomFormat = "dd/MM/yyyy";
-            dateTimePickerThongKe.Format = DateTimePickerFormat.Custom;
-            dateTimePickerThongKe.Location = new Point(175, 96);
-            dateTimePickerThongKe.Name = "dateTimePickerThongKe";
-            dateTimePickerThongKe.Size = new Size(144, 23);
-            dateTimePickerThongKe.TabIndex = 5;
+            dateTimePickerThongKeStart.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerThongKeStart.Format = DateTimePickerFormat.Custom;
+            dateTimePickerThongKeStart.Location = new Point(175, 96);
+            dateTimePickerThongKeStart.Name = "dateTimePickerThongKeStart";
+            dateTimePickerThongKeStart.Size = new Size(144, 23);
+            dateTimePickerThongKeStart.TabIndex = 5;
             // 
             // cbbThongKe
             // 
@@ -677,9 +748,9 @@
             label20.AutoSize = true;
             label20.Location = new Point(54, 102);
             label20.Name = "label20";
-            label20.Size = new Size(97, 15);
+            label20.Size = new Size(78, 15);
             label20.TabIndex = 3;
-            label20.Text = "Theo ngày tháng";
+            label20.Text = "Ngày bắt đầu";
             // 
             // label19
             // 
@@ -702,12 +773,13 @@
             // 
             // btnXemBaoCao
             // 
-            btnXemBaoCao.Location = new Point(358, 75);
+            btnXemBaoCao.Location = new Point(632, 106);
             btnXemBaoCao.Name = "btnXemBaoCao";
             btnXemBaoCao.Size = new Size(91, 42);
             btnXemBaoCao.TabIndex = 0;
             btnXemBaoCao.Text = "Xem báo cáo";
             btnXemBaoCao.UseVisualStyleBackColor = true;
+            btnXemBaoCao.Click += btnXemBaoCao_Click;
             // 
             // Form1
             // 
@@ -716,8 +788,10 @@
             ClientSize = new Size(867, 501);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quản lý cửa hàng máy tính";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -800,7 +874,7 @@
         private TextBox txtTongDoanhThu;
         private Label label22;
         private DataGridView dtvgThongKe;
-        private DateTimePicker dateTimePickerThongKe;
+        private DateTimePicker dateTimePickerThongKeStart;
         private ComboBox cbbThongKe;
         private Label label20;
         private Label label19;
@@ -809,5 +883,11 @@
         private TextBox txtNameCategory;
         private Button btnDeleteCategory;
         private Button btnUpdateCategory;
+        private TextBox txtSearchProduct;
+        private Label label23;
+        private TextBox txtSearchCategory;
+        private Label label24;
+        private DateTimePicker dateTimePickerThongKeEnd;
+        private Label label25;
     }
 }

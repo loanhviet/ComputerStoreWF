@@ -22,3 +22,4 @@ D:\BTLon_ComputerStore\ComputerStore\ComputerStore\bin\Debug\net8.0-windows\runt
 D:\BTLon_ComputerStore\ComputerStore\ComputerStore\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 D:\BTLon_ComputerStore\ComputerStore\ComputerStore\obj\Debug\net8.0-windows\ComputerStore.csproj.AssemblyReference.cache
 D:\BTLon_ComputerStore\ComputerStore\ComputerStore\obj\Debug\net8.0-windows\Computer.2C944D8C.Up2Date
+D:\BTLon_ComputerStore\ComputerStore\ComputerStore\obj\Debug\net8.0-windows\ComputerStore.sourcelink.json
